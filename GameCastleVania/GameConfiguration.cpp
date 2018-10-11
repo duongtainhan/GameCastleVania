@@ -16,6 +16,12 @@ GameConfiguration::~GameConfiguration()
 {
 }
 
+/*
+WHAT IS BACKBUFFER?
+- Backbuffer: Để ngăn chặn sự nhấp nháy trong hiệu ứng thì cách tốt nhất là vẽ ở off-screen texture
+- Sau khi vẽ hoàn thành thì nó được đưa lên màn hình
+*/
+
 //Khởi tạo hàm
 // :: kế thừa, giống như extends trong android
 double GameConfiguration::GetConfiguration(const char * key)
