@@ -122,6 +122,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="GameConfiguration.h" />
+    <ClInclude Include="WindowGame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameConfiguration.cpp" />
