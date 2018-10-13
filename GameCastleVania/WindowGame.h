@@ -16,3 +16,20 @@ Game trải qua 3 giai đoạn chính gồm: Khởi Tạo (init), Chạy (run) v
 5. Tạo nơi update Game
 6. Tạo nơi giải phóng các tài nguyên cần được giải phóng trước lúc chương trình thoát
 */
+
+#include <Windows.h>
+#include "GameConfiguration.h"
+
+class WindowGame
+{
+	HWND hWnd;
+	static WindowGame* instance;
+
+public:
+	WindowGame();
+	~WindowGame();
+	static WindowGame* getIntance();
+	static LRESULT CALLBACK WinProc(HWND, UINT, WPARAM, LPARAM);
+	void initHandleWindows(HINSTANCE hInstance, int nCmdShow);
+	HWND getHandleWindow();
+};
