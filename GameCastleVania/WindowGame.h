@@ -29,7 +29,7 @@ public:
 	WindowGame();
 	~WindowGame();
 	static WindowGame* getIntance();
-	static LRESULT CALLBACK WinProc(HWND, UINT, WPARAM, LPARAM);
+	static LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 	void initHandleWindows(HINSTANCE hInstance, int nCmdShow);
 	HWND getHandleWindow();
 };

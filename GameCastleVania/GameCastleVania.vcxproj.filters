@@ -26,5 +26,8 @@
     <ClCompile Include="GameConfiguration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WindowGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
