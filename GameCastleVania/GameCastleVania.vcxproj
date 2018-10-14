@@ -122,10 +122,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="GameConfiguration.h" />
+    <ClInclude Include="GameDirectX.h" />
     <ClInclude Include="WindowGame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameConfiguration.cpp" />
+    <ClCompile Include="GameDirectX.cpp" />
     <ClCompile Include="WindowGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

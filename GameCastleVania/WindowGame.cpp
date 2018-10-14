@@ -7,7 +7,7 @@ WindowGame::~WindowGame(void)
 {
 }
 WindowGame* WindowGame::instance = 0;
-WindowGame* WindowGame::getIntance()
+WindowGame* WindowGame::getInstance()
 {
 	if (instance == 0)
 		instance = new WindowGame();

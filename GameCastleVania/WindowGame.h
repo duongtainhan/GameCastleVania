@@ -28,7 +28,7 @@ class WindowGame
 public:
 	WindowGame();
 	~WindowGame();
-	static WindowGame* getIntance();
+	static WindowGame* getInstance();
 	static LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 	void initHandleWindows(HINSTANCE hInstance, int nCmdShow);
 	HWND getHandleWindow();

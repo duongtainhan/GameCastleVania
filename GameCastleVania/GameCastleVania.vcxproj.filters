@@ -21,12 +21,18 @@
     <ClInclude Include="WindowGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameDirectX.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameConfiguration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WindowGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDirectX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
