@@ -24,6 +24,9 @@
     <ClInclude Include="GameDirectX.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameTexture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameConfiguration.cpp">

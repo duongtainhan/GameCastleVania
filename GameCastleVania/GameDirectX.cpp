@@ -147,7 +147,7 @@ void GameDirectX::BeginGraphics()
 {
 	HRESULT hr = d3ddv->BeginScene();
 	HRESULT hr1 = sprite->Begin(D3DXSPRITE_ALPHABLEND);
-	// khởi tạo màu trong suốt
+	// khởi tạo màu cho nền
 	d3ddv->Clear(0, 0, D3DCLEAR_TARGET, D3DCOLOR_XRGB(10, 10, 10), 1.0f, 0);
 	if (FAILED(hr) || FAILED(hr1))
 	{

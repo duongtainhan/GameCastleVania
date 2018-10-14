@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClInclude Include="GameConfiguration.h" />
     <ClInclude Include="GameDirectX.h" />
+    <ClInclude Include="GameTexture.h" />
     <ClInclude Include="WindowGame.h" />
   </ItemGroup>
   <ItemGroup>
