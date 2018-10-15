@@ -30,7 +30,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//Khởi tạo hình
 	GameTexture gameTexture;
-	gameTexture.Init("file/viet_nam.png");
+	gameTexture.Init("file/viet_nam.png", D3DCOLOR_ARGB(255,218,37,29));
 
 	//Vòng lặp game
 	while (msg.message != WM_QUIT)
