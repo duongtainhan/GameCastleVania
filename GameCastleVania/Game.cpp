@@ -30,6 +30,9 @@ void Game::GameInit()
 	currentIndex = 0;
 	//Xét vị trí đường dẫn của hình ảnh, và màu trong suốt
 	image.Init("file/Animation.png", D3DCOLOR_XRGB(109, 167, 131));
+
+	//Làm chậm animation
+	timeDelay.init(1369);
 }
 
 void Game::GameUpdate()
@@ -38,10 +41,13 @@ void Game::GameUpdate()
 	//Nếu vị trí là 0 thì vẽ khung hình 1
 	//Ngược lại nếu là 1 thì vẽ khung hình 0
 
-	currentIndex++;
-	if (currentIndex > 1)
+	if (timeDelay.atTime())
 	{
-		currentIndex = 0;
+		currentIndex++;
+		if (currentIndex > 1)
+		{
+			currentIndex = 0;
+		}
 	}
 }
 

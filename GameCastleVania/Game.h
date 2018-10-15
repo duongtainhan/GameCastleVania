@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "GameTexture.h"
 #include "List.h"
+#include "GameTime.h"
 
 class Game
 {
@@ -8,11 +9,11 @@ class Game
 	List<RECT*> rectAnimations;
 	//Khung hình hiện tại
 	int currentIndex;
-
 	//Hình cần vẽ lên
 	GameTexture image;
-	//Vị trí của hình
-	int x, y;
+	
+	//Khởi tạo GameTime dùng để làm chậm lại animation
+	GameTime timeDelay;
 
 	static Game* instance;
 public:
