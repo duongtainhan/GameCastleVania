@@ -12,6 +12,7 @@
 using namespace std;
 
 #include "GameTexture.h"
+#include "Game.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -28,9 +29,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	// Tính thời gian cho mỗi frame
 	DWORD timePerFrame = 1000 / GLOBALS_D("fps");
 
-	//Khởi tạo hình
-	GameTexture gameTexture;
-	gameTexture.Init("file/viet_nam.png", D3DCOLOR_ARGB(255,218,37,29));
+	Game::getInstance()->GameInit();
 
 	//Vòng lặp game
 	while (msg.message != WM_QUIT)
@@ -43,6 +42,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		DWORD deltaTime = now - startTime;
 		if (deltaTime >= timePerFrame)
 		{
+			Game::getInstance()->GameUpdate();
 			startTime = now;
 			if (PeekMessage(&msg, 0, 0, 0, PM_REMOVE))
 			{
@@ -54,10 +54,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			//Bắt đầu vẽ lên backbuffer
 			GameDirectX::getInstance()->BeginGraphics();
 
-			RECT viewRect;
-			SetRect(&viewRect, 66, 30, 182, 147);
-			//Vẽ hình
-			gameTexture.Render(9, 9,&viewRect);
+			Game::getInstance()->GameRender();
+			
 			//Kết thúc vẽ lên backbuffer
 			GameDirectX::getInstance()->EndGraphics();
 			//Vẽ backbuffer lên màn hình
