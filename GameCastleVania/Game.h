@@ -1,8 +1,14 @@
 ﻿#pragma once
 #include "GameTexture.h"
+#include "List.h"
 
 class Game
 {
+	//Danh sách các vị trí khung hình cần vẽ để tạo animation
+	List<RECT*> rectAnimations;
+	//Khung hình hiện tại
+	int currentIndex;
+
 	//Hình cần vẽ lên
 	GameTexture image;
 	//Vị trí của hình

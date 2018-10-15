@@ -153,5 +153,3 @@ struct List
 		Count = 0;
 	}
 };
-
-};

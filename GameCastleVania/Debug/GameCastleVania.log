@@ -1,1 +1,6 @@
-﻿
+﻿  Game.cpp
+  WinMain.cpp
+\\mac\home\documents\gamecastlevania\gamecastlevania\winmain.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+\\mac\home\documents\gamecastlevania\gamecastlevania\winmain.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'DWORD', possible loss of data
+  Generating Code...
+  GameCastleVania.vcxproj -> \\Mac\Home\Documents\GameCastleVania\Debug\GameCastleVania.exe
