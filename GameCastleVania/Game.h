@@ -20,6 +20,6 @@ public:
 
 	//Các hàm khởi tạo, cập nhật và vẽ game
 	void GameInit();
-	void GameUpdate();
+	void GameUpdate(float dt);
 	void GameRender();
 };

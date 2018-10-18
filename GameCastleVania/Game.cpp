@@ -30,7 +30,7 @@ void Game::GameInit()
 	// Di chuyển camera theo phương phải 1 px
 	Camera::getInstance()->setDx(1);
 }
-void Game::GameUpdate()
+void Game::GameUpdate(float dt)
 {
 	// Di chuyển camera theo phương x
 	Camera::getInstance()->goX();

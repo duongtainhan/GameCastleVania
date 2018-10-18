@@ -8,6 +8,10 @@ Tilemap::Tilemap()
 Tilemap::~Tilemap()
 {
 }
+int Tilemap::getWorldHeight()
+{
+	return tileRows * tileHeight;
+}
 void Tilemap::Init(const char * tilesheetPath, const char * matrixPath)
 {
 	// Khởi tạo tilesheet

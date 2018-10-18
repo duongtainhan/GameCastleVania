@@ -24,9 +24,11 @@ public:
 	//Vẽ tilemap bằng camera
 	void render(Camera* camera);
 
+	//Lấy chiều cao của world
+	int getWorldHeight();
+
 	// tilesheetPath: đường dẫn tilesheet
 	// matrixPath : đường dẫn file ma trận
-	
 	void Init(const char* tilesheetPath, const char* matrixPath);
 	// folderPath : đường dẫn thư mục chứa ma trận và tilesheet
 	void Init(const char* folderPath);
