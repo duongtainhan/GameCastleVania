@@ -18,7 +18,8 @@ void Game::GameInit()
 {
 	// Khởi tạo tilemap
 	tilemap = new Tilemap();
-	tilemap->Init("file/demotile");
+	//Thư mục chứa tilemap---demo
+	tilemap->Init("Res/TileMap");
 	Camera::getInstance()->set(
 		0,
 		400,
@@ -29,7 +30,6 @@ void Game::GameInit()
 	// Di chuyển camera theo phương phải 1 px
 	Camera::getInstance()->setDx(1);
 }
-
 void Game::GameUpdate()
 {
 	// Di chuyển camera theo phương x
