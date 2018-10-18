@@ -40,6 +40,9 @@ double GameConfiguration::GetConfiguration(const char * key)
 
 		//Thiết lập fps cho game
 		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 70));
+
+		//Thiết lập thời gian đổi frame cho animations là 100ms
+		globalsConfigurationDouble->insert(pair<const char*, double>("object_animation_time_default", 100));
 	}
 	//Xét các giá trị trên ở 1 key, tương tự như index trong mảng, nhằm xác định vị trí và phân biệt
 	return globalsConfigurationDouble->at(key);
