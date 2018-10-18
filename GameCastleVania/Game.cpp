@@ -32,8 +32,12 @@ void Game::GameInit()
 
 void Game::GameUpdate()
 {
+	// Di chuyển camera theo phương x
+	Camera::getInstance()->goX();
 }
 
 void Game::GameRender()
 {
+	// Vẽ tile lên game
+	tilemap->render(Camera::getInstance());
 }
