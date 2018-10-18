@@ -51,7 +51,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				TranslateMessage(&msg);
 				DispatchMessage(&msg);
 			}
-			float time = deltaTime / 1000.0f;
 
 			//Bắt đầu vẽ lên backbuffer
 			GameDirectX::getInstance()->BeginGraphics();

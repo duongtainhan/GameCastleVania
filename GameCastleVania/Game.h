@@ -6,12 +6,13 @@
 #include "Animation.h"
 #include "Sprite.h"
 #include "Tilemap.h"
+#include "World.h"
 
 class Game
 {
 	static Game* instance;
 	
-	Tilemap* tilemap;
+	World* world;
 public:
 	Game();
 	~Game();

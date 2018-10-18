@@ -21,6 +21,8 @@ SpriteManager::SpriteManager()
 	}
 
 	// Thêm sprite ở đây
+	// Thiết lập sprite cho con zoombie
+	sprites[SPRITE_INFO_ZOMBIE]->InitFromFile("Res/Objects/Zombie/zombie.png", "Res/Objects/Zombie/zombie.info.dat");
 }
 SpriteManager::~SpriteManager()
 {

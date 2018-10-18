@@ -17,27 +17,22 @@ Game::~Game()
 void Game::GameInit()
 {
 	// Khởi tạo tilemap
-	tilemap = new Tilemap();
+	world = new World();
 	//Thư mục chứa tilemap---demo
-	tilemap->Init("Res/TileMap");
+	world->Init("Res/TileMap");
 	Camera::getInstance()->set(
 		0,
 		400,
 		// Kích thước của camera bằng với kích thước của backbuffer
 		GLOBALS_D("backbuffer_width"),
 		GLOBALS_D("backbuffer_height"));
-
-	// Di chuyển camera theo phương phải 1 px
-	Camera::getInstance()->setDx(1);
 }
 void Game::GameUpdate(float dt)
 {
-	// Di chuyển camera theo phương x
-	Camera::getInstance()->goX();
+	world->update(dt);
 }
 
 void Game::GameRender()
 {
-	// Vẽ tile lên game
-	tilemap->render(Camera::getInstance());
+	world->render();
 }
