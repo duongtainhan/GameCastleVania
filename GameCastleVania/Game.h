@@ -3,6 +3,7 @@
 #include "List.h"
 #include "GameTime.h"
 #include "FrameAnimation.h"
+#include "Animation.h"
 
 class Game
 {
@@ -18,6 +19,7 @@ class Game
 	List<FrameAnimation*> rectAnimations;
 	//Buc hinh animation
 	GameTexture mario;
+	Animation animation;
 
 public:
 	Game();
