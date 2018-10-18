@@ -35,11 +35,11 @@ void GameTexture::Init(const char* filepath, D3DCOLOR transColor)
 		return;
 }
 
-void GameTexture::Render(int x, int y, RECT *r)
+void GameTexture::Render(int x, int y, int anchorX, int anchorY, RECT *r)
 {
 	GameDirectX::getInstance()->GetSprite()->Draw(m_image,
 		r,
-		&D3DXVECTOR3(0, 0, 0),
+		&D3DXVECTOR3(anchorX, anchorY, 0),
 		&D3DXVECTOR3(x, y, 0),
 		D3DCOLOR_XRGB(255, 255, 255));
 }

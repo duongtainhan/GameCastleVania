@@ -2,20 +2,23 @@
 #include "GameTexture.h"
 #include "List.h"
 #include "GameTime.h"
+#include "FrameAnimation.h"
 
 class Game
 {
-	//Danh sách các vị trí khung hình cần vẽ để tạo animation
-	List<RECT*> rectAnimations;
 	//Khung hình hiện tại
 	int currentIndex;
-	//Hình cần vẽ lên
-	GameTexture image;
 	
 	//Khởi tạo GameTime dùng để làm chậm lại animation
 	GameTime timeDelay;
 
 	static Game* instance;
+
+	//danh sach cac vi tri khung
+	List<FrameAnimation*> rectAnimations;
+	//Buc hinh animation
+	GameTexture mario;
+
 public:
 	Game();
 	~Game();

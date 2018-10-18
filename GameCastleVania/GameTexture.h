@@ -31,6 +31,6 @@ public:
 	void Init(const char* filepath, D3DCOLOR transColor = 0);
 	GameTexture() {}
 
-	void Render(int x, int y, RECT *r = 0);
+	void Render(int x, int y, int anchorX, int anchorY, RECT *r = 0);
 	~GameTexture();
 };

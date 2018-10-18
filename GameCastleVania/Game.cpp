@@ -19,17 +19,26 @@ void Game::GameInit()
 	//Khởi tạo danh sách vị trí khung hình
 
 	//Thêm khung hình 1 vào list
-	RECT* r1 = new RECT();
-	SetRect(r1, 16, 80, 48, 120);
+	FrameAnimation* r1 = new FrameAnimation();
+	SetRect(r1, 1, 6, 1+21, 6+28);
+	r1->anchorX = 8;
+	r1->anchorY = 0;
 	rectAnimations._Add(r1);
 	//Thêm khung hình 2 vào list
-	RECT* r2 = new RECT();
-	SetRect(r2, 68, 80, 100, 120);
+	FrameAnimation* r2 = new FrameAnimation();
+	SetRect(r2, 27, 6, 27+16, 6+28);
+	r2->anchorX = 4;
+	r2->anchorY = 0;
 	rectAnimations._Add(r2);
+	FrameAnimation* r3 = new FrameAnimation();
+	SetRect(r3, 46, 6, 46+23, 6+28);
+	r3->anchorX = 4;
+	r3->anchorY = 0;
+	rectAnimations._Add(r3);
 	//Xét vị trí khung hình hiện tại là 0
 	currentIndex = 0;
 	//Xét vị trí đường dẫn của hình ảnh, và màu trong suốt
-	image.Init("file/Animation.png", D3DCOLOR_XRGB(109, 167, 131));
+	mario.Init("file/mario.png", D3DCOLOR_XRGB(255, 255, 255));
 
 	//Làm chậm animation
 	timeDelay.init(1369);
@@ -37,14 +46,10 @@ void Game::GameInit()
 
 void Game::GameUpdate()
 {
-	//Animation đang có 2 khung hình: 1 hoặc 0
-	//Nếu vị trí là 0 thì vẽ khung hình 1
-	//Ngược lại nếu là 1 thì vẽ khung hình 0
-
 	if (timeDelay.atTime())
 	{
 		currentIndex++;
-		if (currentIndex > 1)
+		if (currentIndex > 2)
 		{
 			currentIndex = 0;
 		}
@@ -53,5 +58,6 @@ void Game::GameUpdate()
 
 void Game::GameRender()
 {
-	image.Render(9, 9, rectAnimations.at(currentIndex));
+	auto frame = rectAnimations.at(currentIndex);
+	mario.Render(10,10,frame->anchorX,frame->anchorY,frame);
 }
