@@ -1,11 +1,4 @@
 ﻿#include "Animation.h"
-
-Animation::Animation()
-{
-}
-Animation::~Animation()
-{
-}
 int Animation::NextFrame(int currentFrame)
 {
 	/* Ví dụ có 3 frame thì đảm bảo currentFrame chỉ trong 0 1 2 và không thể vượt quá 3 */
@@ -16,4 +9,10 @@ int Animation::NextFrame(int currentFrame)
 	}
 	/* Nếu chưa tới 3 frame thì chuyển qua frame kế */
 	return currentFrame + 1;
+}
+Animation::Animation()
+{
+}
+Animation::~Animation()
+{
 }

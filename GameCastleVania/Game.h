@@ -4,23 +4,20 @@
 #include "GameTime.h"
 #include "FrameAnimation.h"
 #include "Animation.h"
+#include "Sprite.h"
 
 class Game
 {
+	static Game* instance;
 	//Khung hình hiện tại
 	int currentIndex;
+	//Animation hiện tại
+	int currentAnimation;
+	//Sprite
+	Sprite sprite;
 	
 	//Khởi tạo GameTime dùng để làm chậm lại animation
 	GameTime timeDelay;
-
-	static Game* instance;
-
-	//danh sach cac vi tri khung
-	List<FrameAnimation*> rectAnimations;
-	//Buc hinh animation
-	GameTexture mario;
-	Animation animation;
-
 public:
 	Game();
 	~Game();
