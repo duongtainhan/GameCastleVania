@@ -1,5 +1,7 @@
 ﻿#pragma once
-#include"GameTexture.h"
+#include "GameTexture.h"
+#include "Camera.h"
+
 class Tilemap
 {
 	// Chiều rộng tile
@@ -19,6 +21,9 @@ class Tilemap
 	// Ma trận tile
 	int** matrix;
 public:
+	//Vẽ tilemap bằng camera
+	void render(Camera* camera);
+
 	// tilesheetPath: đường dẫn tilesheet
 	// matrixPath : đường dẫn file ma trận
 	

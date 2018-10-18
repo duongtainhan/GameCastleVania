@@ -5,19 +5,13 @@
 #include "FrameAnimation.h"
 #include "Animation.h"
 #include "Sprite.h"
+#include "Tilemap.h"
 
 class Game
 {
 	static Game* instance;
-	//Khung hình hiện tại
-	int currentIndex;
-	//Animation hiện tại
-	int currentAnimation;
-	//Sprite
-	Sprite sprite;
 	
-	//Khởi tạo GameTime dùng để làm chậm lại animation
-	GameTime timeDelay;
+	Tilemap* tilemap;
 public:
 	Game();
 	~Game();
