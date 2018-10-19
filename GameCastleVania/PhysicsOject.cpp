@@ -8,7 +8,7 @@ PhysicsObject::PhysicsObject()
 	setVx(0);
 	setVy(0);
 	// bật physics cho đối tượng
-	setPhysicsEnable(true);
+	setPhysicsEnable(false);
 }
 
 void PhysicsObject::onUpdate(float dt)

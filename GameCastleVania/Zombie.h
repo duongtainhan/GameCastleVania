@@ -1,8 +1,8 @@
 #pragma once
-#include "BaseObject.h"
+#include "PhysicsOject.h"
 
 class Zombie :
-	public BaseObject
+	public PhysicsObject
 {
 public:
 	Zombie();
