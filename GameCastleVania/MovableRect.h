@@ -17,6 +17,8 @@ public:
 	void goY();
 	//Phương thức xử lý va chạm
 	virtual void onCollision(MovableRect* other, float collisionTime, int nx, int ny);
+	//Chặn di chuyển khi phát hiện va chạm
+	void preventMovementWhenCollision(float collisionTime,int nx,int ny);
 	MovableRect();
 	~MovableRect();
 };

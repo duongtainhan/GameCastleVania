@@ -1,9 +1,24 @@
-#include "MovableRect.h"
+﻿#include "MovableRect.h"
 
 
 void MovableRect::onCollision(MovableRect* other, float collisionTime, int nx, int ny)
 {
 }
+void MovableRect::preventMovementWhenCollision(float collisionTime, int nx, int ny)
+{
+	// Dời vật M về sát vật S
+	if (nx != 0)
+	{
+		// Nếu vật va chạm theo phương x
+		setDx(collisionTime*getDx());
+	}
+	if (ny != 0)
+	{
+		// Nếu vật va chạm theo phương y
+		setDy(collisionTime*getDy());
+	}
+}
+
 MovableRect::MovableRect()
 {
 	dx = 0;
