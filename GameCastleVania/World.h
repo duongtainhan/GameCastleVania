@@ -1,7 +1,7 @@
 ﻿#pragma once
-#include"Tilemap.h"
-#include"SpriteManager.h"
-#include"BaseObject.h"
+#include "Tilemap.h"
+#include "SpriteManager.h"
+#include "BaseObject.h"
 
 class World
 {

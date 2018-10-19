@@ -12,7 +12,6 @@ enum SPRITE_INFO
 	// Đối tượng có hình ảnh ta sẽ đặt số dương
 	SPRITE_INFO_SIMON = 0,
 	SPRITE_INFO_ZOMBIE = 1,
-
 	SPRITE_COUNT
 };
 

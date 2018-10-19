@@ -1,4 +1,5 @@
 ﻿#include "SpriteManager.h"
+
 SpriteManager * SpriteManager::instance = 0;
 SpriteManager * SpriteManager::getInstance()
 {
@@ -23,6 +24,7 @@ SpriteManager::SpriteManager()
 	// Thêm sprite ở đây
 	// Thiết lập sprite cho con zoombie
 	sprites[SPRITE_INFO_ZOMBIE]->InitFromFile("Res/Objects/Zombie/zombie.png", "Res/Objects/Zombie/zombie.info.dat");
+	sprites[SPRITE_INFO_SIMON]->InitFromFile("Res/Objects/Simon/image.png", "Res/Objects/Simon/simon.info.dat");
 }
 SpriteManager::~SpriteManager()
 {
