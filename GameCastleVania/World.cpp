@@ -4,6 +4,7 @@
 #include "Zombie.h"
 #include "KEY.h"
 #include "Player.h"
+#include "Collision.h"
 
 void World::Init(const char * tilesheetPath, const char * matrixPath, const char * objectsPath)
 {
@@ -69,8 +70,11 @@ void World::update(float dt)
 	{
 		// Cập nhật đối tượng
 		allObjects[i]->update(dt);
+		//Kiểm tra va chạm
+		Collision::CheckCollision(Player::getInstance(), allObjects[i]);
 	}
 	Player::getInstance()->update(dt);
+	Camera::getInstance()->update();
 }
 
 void World::render()

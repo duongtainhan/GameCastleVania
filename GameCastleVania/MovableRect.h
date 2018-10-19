@@ -15,6 +15,8 @@ public:
 	// Phương thức di chuyển
 	void goX();
 	void goY();
+	//Phương thức xử lý va chạm
+	virtual void onCollision(MovableRect* other, float collisionTime, int nx, int ny);
 	MovableRect();
 	~MovableRect();
 };

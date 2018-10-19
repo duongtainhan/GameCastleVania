@@ -1,5 +1,9 @@
 #include "MovableRect.h"
 
+
+void MovableRect::onCollision(MovableRect* other, float collisionTime, int nx, int ny)
+{
+}
 MovableRect::MovableRect()
 {
 	dx = 0;

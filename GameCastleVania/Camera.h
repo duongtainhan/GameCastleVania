@@ -7,7 +7,7 @@ class Camera : public MovableRect
 	static Camera* instance;
 public:
 	static Camera* getInstance();
-
+	void update();
 	/* phương thức chuyển đổi world qua view
 	Tham số đầu vào là xWorld yWorld
 	Tham số cần lấy là xView yView (nên có dấu &, cần xem lại khái niệm về tham chiếu C++ để hiểu)
