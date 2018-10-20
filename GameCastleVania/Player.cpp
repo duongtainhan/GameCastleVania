@@ -12,23 +12,27 @@ Player * Player::getInstance()
 
 void Player::onUpdate(float dt)
 {
-	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown;
-	/* kiểm tra key bên trái có được nhấn */
+	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown, keyJumpPress;
+	// Kiểm tra key bên trái có được nhấn
 	keyLeftDown = KEY::getInstance()->isLeftDown;
-	/* kiểm tra key bên phải có được nhấn */
+	// Kiểm tra key bên phải có được nhấn */
 	keyRightDown = KEY::getInstance()->isRightDown;
 	keyUpDown = KEY::getInstance()->isUpDown;
 	keyDownDown = KEY::getInstance()->isDownDown;
+	// Kiểm tra key jump có được nhấn
+	keyJumpPress = KEY::getInstance()->isJumpPress;
 
 	float vx = GLOBALS_D("player_vx");
 
-	/* nếu vật đứng trên sàn */
+	// Nếu vật đứng trên sàn
 	if (getIsOnGround())
 	{
+		// Nếu nhấn key trái
 		if (keyLeftDown)
 		{
 			setVx(-vx);
 		}
+		// Nếu nhấn key phải
 		else if (keyRightDown)
 		{
 			setVx(vx);
@@ -37,6 +41,9 @@ void Player::onUpdate(float dt)
 		{
 			setVx(0);
 		}
+		// Nếu đứng trên sàn và nhấn key (x) - jump thì nhân vật sẽ nhảy
+		if (keyJumpPress)
+			setVy(100);
 	}
 	PhysicsObject::onUpdate(dt);
 }
@@ -45,6 +52,7 @@ void Player::onCollision(MovableRect * other, float collisionTime, int nx, int n
 {
 	// Ngăn chặn di chuyển
 	preventMovementWhenCollision(collisionTime, nx, ny);
+	PhysicsObject::onCollision(other, collisionTime, nx, ny);
 }
 
 Player::Player()

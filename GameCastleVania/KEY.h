@@ -8,7 +8,10 @@ public:
 		isLeftDown,
 		isRightDown,
 		isUpDown,
-		isDownDown;
+		isDownDown,
+		isJumpDown,
+		isPreviousJumpDown,
+		isJumpPress;
 
 	static KEY* instance;
 	static KEY* getInstance();
