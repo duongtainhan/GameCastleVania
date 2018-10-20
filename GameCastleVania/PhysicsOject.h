@@ -23,7 +23,7 @@ public:
 	bool getPhysicsEnable();
 	virtual void setPhysicsEnable(bool physicsEnable);
 
-	bool getIsOnGround;
+	bool getIsOnGround();
 	void setIsOnGround(bool isOnGround);
 	// override laij phần xử lý va chạm của object
 	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;

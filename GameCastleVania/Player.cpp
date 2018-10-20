@@ -13,35 +13,30 @@ Player * Player::getInstance()
 void Player::onUpdate(float dt)
 {
 	bool keyLeftDown, keyRightDown, keyUpDown, keyDownDown;
+	/* kiểm tra key bên trái có được nhấn */
 	keyLeftDown = KEY::getInstance()->isLeftDown;
+	/* kiểm tra key bên phải có được nhấn */
 	keyRightDown = KEY::getInstance()->isRightDown;
 	keyUpDown = KEY::getInstance()->isUpDown;
 	keyDownDown = KEY::getInstance()->isDownDown;
 
-	int v = 2;
-	if (keyLeftDown)
+	float vx = GLOBALS_D("player_vx");
+
+	/* nếu vật đứng trên sàn */
+	if (getIsOnGround())
 	{
-		setDx(-v);
-	}
-	else if (keyRightDown)
-	{
-		setDx(v);
-	}
-	else
-	{
-		setDx(0);
-	}
-	if (keyUpDown)
-	{
-		setDy(v);
-	}
-	else if (keyDownDown)
-	{
-		setDy(-v);
-	}
-	else
-	{
-		setDy(0);
+		if (keyLeftDown)
+		{
+			setVx(-vx);
+		}
+		else if (keyRightDown)
+		{
+			setVx(vx);
+		}
+		else
+		{
+			setVx(0);
+		}
 	}
 	PhysicsObject::onUpdate(dt);
 }

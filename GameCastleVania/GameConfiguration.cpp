@@ -39,10 +39,16 @@ double GameConfiguration::GetConfiguration(const char * key)
 		globalsConfigurationDouble->insert(pair<const char*, double>("backbuffer_height", 224));
 
 		//Thiết lập fps cho game
-		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 70));
+		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 60));
 
 		//Thiết lập thời gian đổi frame cho animations là 100ms
 		globalsConfigurationDouble->insert(pair<const char*, double>("object_animation_time_default", 100));
+
+		// Thiết lập một số thông số cơ bản cho player
+		globalsConfigurationDouble->insert(pair<const char*, double>("player_vx", 60));
+
+		//Thiết lập trọng lực cho đối tượng là 80
+		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", -80));
 	}
 	//Xét các giá trị trên ở 1 key, tương tự như index trong mảng, nhằm xác định vị trí và phân biệt
 	return globalsConfigurationDouble->at(key);

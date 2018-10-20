@@ -2,6 +2,7 @@
 #include "PhysicsOject.h"
 #include "SpriteManager.h"
 #include "KEY.h"
+#include "PhysicsOject.h"
 
 class Player :
 	public PhysicsObject
