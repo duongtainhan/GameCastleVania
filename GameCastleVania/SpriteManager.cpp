@@ -25,6 +25,7 @@ SpriteManager::SpriteManager()
 	// Thiết lập sprite cho con zoombie
 	sprites[SPRITE_INFO_ZOMBIE]->InitFromFile("Res/Objects/Zombie/zombie.png", "Res/Objects/Zombie/zombie.info.dat");
 	sprites[SPRITE_INFO_SIMON]->InitFromFile("Res/Objects/Simon/image.png", "Res/Objects/Simon/simon.info.dat");
+	sprites[SPRITE_INFO_SIMON]->image->direction = TEXTURE_DIRECTION_RIGHT;
 }
 SpriteManager::~SpriteManager()
 {
