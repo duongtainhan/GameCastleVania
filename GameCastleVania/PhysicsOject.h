@@ -8,6 +8,8 @@ class PhysicsObject :
 	float ax, ay, vx, vy;
 	// Cho phép trọng lực hay không
 	bool physicsEnable;
+	// Vật có đứng trên mặt đất hay sàn không?
+	bool isOnGround;
 public:
 	float getAx();
 	float getAy();
@@ -20,6 +22,11 @@ public:
 
 	bool getPhysicsEnable();
 	virtual void setPhysicsEnable(bool physicsEnable);
+
+	bool getIsOnGround;
+	void setIsOnGround(bool isOnGround);
+	// override laij phần xử lý va chạm của object
+	void onCollision(MovableRect* other, float collisionTime, int nx, int ny) override;
 
 	// override lại phương thức update của BaseObject
 	void onUpdate(float dt) override;
