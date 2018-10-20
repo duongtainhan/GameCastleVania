@@ -32,12 +32,14 @@ void Player::onUpdate(float dt)
 		{
 			setAnimation(PLAYER_ACTION_RUN);
 			setVx(-vx);
+			setDirection(TEXTURE_DIRECTION_LEFT);
 		}
 		// Nếu nhấn key phải
 		else if (keyRightDown)
 		{
 			setAnimation(PLAYER_ACTION_RUN);
 			setVx(vx);
+			setDirection(TEXTURE_DIRECTION_RIGHT);
 		}
 		else
 		{

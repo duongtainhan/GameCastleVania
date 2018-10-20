@@ -19,6 +19,9 @@ class BaseObject :
 	bool pauseAnimation;
 	// Kiểm tra xem frame cuối cùng đã hoàn thành hay chưa
 	bool isLastFrameAnimationDone;
+
+	//Hướng mặt của đối tượng
+	TEXTURE_DIRECTION direction;
 public:
 	void setSprite(Sprite*sprite);
 	Sprite* getSprite();
@@ -43,6 +46,9 @@ public:
 	void setAnimation(int animation);
 	int getFrameAnimation();
 	void setFrameAnimation(int frameAnimarion);
+
+	TEXTURE_DIRECTION getDirection();
+	void setDirection(TEXTURE_DIRECTION direction);
 
 	BaseObject();
 	~BaseObject();
