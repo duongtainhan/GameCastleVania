@@ -39,6 +39,11 @@ public:
 	// Vẽ đối tượng
 	virtual void render(Camera* camera);
 
+	int getAnimation();
+	void setAnimation(int animation);
+	int getFrameAnimation();
+	void setFrameAnimation(int frameAnimarion);
+
 	BaseObject();
 	~BaseObject();
 };

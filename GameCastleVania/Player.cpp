@@ -30,20 +30,27 @@ void Player::onUpdate(float dt)
 		// Nếu nhấn key trái
 		if (keyLeftDown)
 		{
+			setAnimation(PLAYER_ACTION_RUN);
 			setVx(-vx);
 		}
 		// Nếu nhấn key phải
 		else if (keyRightDown)
 		{
+			setAnimation(PLAYER_ACTION_RUN);
 			setVx(vx);
 		}
 		else
 		{
+			setAnimation(PLAYER_ACTION_STAND);
 			setVx(0);
 		}
 		// Nếu đứng trên sàn và nhấn key (x) - jump thì nhân vật sẽ nhảy
 		if (keyJumpPress)
 			setVy(100);
+	}
+	else
+	{
+		setAnimation(PLAYER_ACTION_JUMP);
 	}
 	PhysicsObject::onUpdate(dt);
 }

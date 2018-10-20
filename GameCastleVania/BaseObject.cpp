@@ -85,6 +85,30 @@ void BaseObject::render(Camera* camera)
 	sprite->render(xView, yView, animationIndex, frameIndex);
 }
 
+int BaseObject::getAnimation()
+{
+	return animationIndex;
+}
+void BaseObject::setAnimation(int animation)
+{
+	// Nếu set khác animation thì cho chạy lại từ frame 0
+	if (this->animationIndex != animation)
+	{
+		setFrameAnimation(0);
+	}
+	this->animationIndex = animation;
+}
+
+void BaseObject::setFrameAnimation(int frameAnimation)
+{
+	this->frameIndex = frameAnimation;
+}
+int BaseObject::getFrameAnimation()
+{
+	return frameIndex;
+}
+
+
 BaseObject::BaseObject()
 {
 	setSprite(NULL);
