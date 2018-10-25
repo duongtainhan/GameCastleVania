@@ -40,6 +40,8 @@ void BaseObject::onInitFromFile(ifstream& fs, int mapHeight)
 	y = mapHeight - y;
 	// Khởi tạo x y width height cho đối tượng
 	set(x, y, width, height);
+
+	setCollisionType((COLLISION_TYPE)collisionType);
 }
 
 void BaseObject::update(float dt)

@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "Rect.h"
+#include "CollisionType.h"
 
 // Đây là lớp Rect có thể di chuyển
 class MovableRect :
@@ -7,7 +8,10 @@ class MovableRect :
 {
 	// Độ dời di chuyển của đối tượng
 	float dx, dy;
+	COLLISION_TYPE collisionType;
 public:
+	COLLISION_TYPE getCollisionType();
+	void setCollisionType(COLLISION_TYPE collisionType);
 	virtual void setDx(float dx);
 	virtual void setDy(float dy);
 	float getDx();
