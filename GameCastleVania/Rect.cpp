@@ -11,12 +11,12 @@ Rect::~Rect()
 
 void Rect::moveX(float dx)
 {
-	x += dx;
+	x = (int)(x + dx + 0.5);
 }
 
 void Rect::moveY(float dy)
 {
-	y += dy;
+	y = (int)(y + dy + 0.5);
 }
 
 void Rect::move(float dx, float dy)
