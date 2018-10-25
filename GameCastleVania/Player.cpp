@@ -59,9 +59,12 @@ void Player::onUpdate(float dt)
 
 void Player::onCollision(MovableRect * other, float collisionTime, int nx, int ny)
 {
-	// Ngăn chặn di chuyển
-	preventMovementWhenCollision(collisionTime, nx, ny);
-	PhysicsObject::onCollision(other, collisionTime, nx, ny);
+	if (other->getCollisionType() == COLLISION_TYPE_GROUND)
+	{
+		// Ngăn chặn di chuyển
+		preventMovementWhenCollision(collisionTime, nx, ny);
+		PhysicsObject::onCollision(other, collisionTime, nx, ny);
+	}
 }
 
 Player::Player()
