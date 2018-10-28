@@ -36,7 +36,7 @@ double GameConfiguration::GetConfiguration(const char * key)
 
 		//Thiết lập kích thước cho BackBuffer: backbuffer_width, backbuffer_height
 		globalsConfigurationDouble->insert(pair<const char*, double>("backbuffer_width", 256));
-		globalsConfigurationDouble->insert(pair<const char*, double>("backbuffer_height", 224));
+		globalsConfigurationDouble->insert(pair<const char*, double>("backbuffer_height", 200));
 
 		//Thiết lập fps cho game
 		globalsConfigurationDouble->insert(pair<const char*, double>("fps", 90));
@@ -46,9 +46,10 @@ double GameConfiguration::GetConfiguration(const char * key)
 
 		// Thiết lập một số thông số cơ bản cho player
 		globalsConfigurationDouble->insert(pair<const char*, double>("player_vx", 60));
+		globalsConfigurationDouble->insert(pair<const char*, double>("player_vy_jump", 120));
 
 		//Thiết lập trọng lực cho đối tượng
-		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", -150));
+		globalsConfigurationDouble->insert(pair<const char*, double>("object_default_ay", -180));
 	}
 	//Xét các giá trị trên ở 1 key, tương tự như index trong mảng, nhằm xác định vị trí và phân biệt
 	return globalsConfigurationDouble->at(key);

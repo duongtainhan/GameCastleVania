@@ -13,72 +13,171 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="GameCollision">
+      <UniqueIdentifier>{e524c7d4-c830-4a59-8120-396121a63ea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects">
+      <UniqueIdentifier>{6d4c3f87-a6e8-4a30-b5f5-79f735ee1cb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameUtils">
+      <UniqueIdentifier>{e7046467-d86a-410b-969f-3e1e0de5eae5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprites">
+      <UniqueIdentifier>{08b69231-4450-4578-8326-eaa6fadcea5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameComponents">
+      <UniqueIdentifier>{1f2327d6-548c-45fc-9588-942fcb212c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MapProcess">
+      <UniqueIdentifier>{bc9749ea-2a09-409d-a1ff-1a46de8acfd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{578ea47f-e8f5-489d-9d3d-3f6cf6787cdf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BaseObject.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Zombie.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MovableRect.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsOject.h">
+      <Filter>GameObjects</Filter>
+    </ClInclude>
     <ClInclude Include="GameConfiguration.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="WindowGame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameDirectX.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameTexture.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="List.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameUtils</Filter>
     </ClInclude>
     <ClInclude Include="GameTime.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameUtils</Filter>
     </ClInclude>
-    <ClInclude Include="FrameAnimation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Animation.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="KEY.h">
+      <Filter>GameUtils</Filter>
     </ClInclude>
     <ClInclude Include="GameUtils.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="List.h">
+      <Filter>GameUtils</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>Header Files</Filter>
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteManager.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="Collision.h">
+      <Filter>GameCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionType.h">
+      <Filter>GameCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionTypeCollide.h">
+      <Filter>GameCollision</Filter>
+    </ClInclude>
+    <ClInclude Include="Tilemap.h">
+      <Filter>MapProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>MapProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>MapProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDirectX.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowGame.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTexture.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>GameComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameAnimation.h">
+      <Filter>Animation</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameConfiguration.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="BaseObject.cpp">
+      <Filter>GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="WindowGame.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Zombie.cpp">
+      <Filter>GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="GameDirectX.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="MovableRect.cpp">
+      <Filter>GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="GameTexture.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Player.cpp">
+      <Filter>GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="WinMain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="PhysicsOject.cpp">
+      <Filter>GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="GameTime.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>GameUtils</Filter>
     </ClCompile>
     <ClCompile Include="GameUtils.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>GameUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="KEY.cpp">
+      <Filter>GameUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteManager.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="Collision.cpp">
+      <Filter>GameCollision</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameConfiguration.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDirectX.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Tilemap.cpp">
+      <Filter>MapProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>MapProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>MapProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTexture.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowGame.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>GameComponents</Filter>
+    </ClCompile>
     <ClCompile Include="Animation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Animation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

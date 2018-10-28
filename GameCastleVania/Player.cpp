@@ -48,7 +48,7 @@ void Player::onUpdate(float dt)
 		}
 		// Nếu đứng trên sàn và nhấn key (x) - jump thì nhân vật sẽ nhảy
 		if (keyJumpPress)
-			setVy(100);
+			setVy(GLOBALS_D("player_vy_jump"));
 	}
 	else
 	{
